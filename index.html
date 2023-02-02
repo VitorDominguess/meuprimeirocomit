@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="calculadora">
+      <div class="tela">
+        <p id="input1" type="text" name="operacao" id=""></p>
+        <div class="resultado">
+          <span>&equals;</span>
+          <p id="input2" type="text" name="ultNum"></p>
+        </div>
+      </div>
+      <div class="botoes">
+        <button onclick="clean('')" class="btn btnPreto ce">CE</button>
+        <button onclick="back('')" class="btn btnPreto">C</button>
+        <button onclick="insert('%')" class="btn btnPreto">&percnt;</button>
+        <button onclick="insert('/')" class="btn btnRoxo">&divide;</button>
+        <button class="btn btnPreto" onclick="insert('7')">7</button>
+        <button onclick="insert('8')" class="btn btnPreto">8</button>
+        <button onclick="insert('9')" class="btn btnPreto">9</button>
+        <button onclick="insert('*')" class="btn btnRoxo">&times;</button>
+        <button onclick="insert('4')" class="btn btnPreto">4</button>
+        <button onclick="insert('5')" class="btn btnPreto">5</button>
+        <button onclick="insert('6')" class="btn btnPreto">6</button>
+        <button onclick="insert('-')" class="btn btnRoxo">&minus;</button>
+        <button onclick="insert('1')" class="btn btnPreto">1</button>
+        <button onclick="insert('2')" class="btn btnPreto">2</button>
+        <button onclick="insert('3')" class="btn btnPreto">3</button>
+        <button onclick="insert('+')" class="btn btnRoxo">+</button>
+        <button class="btn btnPreto">&plusmn;</button>
+        <button onclick="insert('0')" class="btn btnPreto">0</button>
+        <button onclick="insert('.')" class="btn btnPreto">,</button>
+        <button onclick="calcular()" class="btn btnRoxo">&equals;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function insert(num)
+    {
+      var numero = document.getElementById('input1').innerHTML;
+      document.getElementById('input1').innerHTML = numero + num;
+    }
+
+    function clean()
+    {
+      document.getElementById('input1').innerHTML = "";
+      document.getElementById('input2').innerHTML = "";
+    }
+
+    function back()
+    {
+      var resultado = document.getElementById('input1').innerHTML;
+      document.getElementById('input1').innerHTML = resultado.substring(0 , resultado.length -1);
+    }
+
+    function calcular()
+    {
+      var resultado = document.getElementById('input1').innerHTML;
+      if(resultado)
+      {
+        document.getElementById('input2').innerHTML = eval(resultado);
+      }
+    }
+  </script>
+
+</body>
+</html>
