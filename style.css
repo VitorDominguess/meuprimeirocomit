@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(128,126,206);
+  font-family: 'Rubik', sans-serif;
+}
+
+.hero{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculadora{
+  width: 356px;
+  height: 566px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+
+  background-color: #2d2a37;
+
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,1);
+
+  border-radius: 48px;
+}
+
+.tela{
+  width: 288px;
+  height: 86px;
+
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela input{
+  width: 100%;
+  height: 100%;
+
+  background: none;
+  border: none;
+
+  outline: 0;
+  text-align: end;
+}
+
+.resultado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.resultado span{
+  color: #6B6B6B;
+  font-size: 1.3rem;
+
+}
+
+#input1{
+  width: 270px;
+  height: 50px;
+  font-size: 1.2rem;
+  text-align: end;
+  color: #6B6B6B;
+
+}
+
+#input2{
+  width: 270px;
+  height: 50px;
+  font-size: 3rem;
+
+  text-align: end;
+
+  color: #ebebeb;
+}
+
+.botoes{
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 20px 0 0 25px;
+
+}
+
+.btn{
+  border-radius: 50%;
+  border: none;
+
+  height: 64px;
+  width: 64px;
+
+  margin-bottom: 20px;
+
+  font-size: 1.5rem;
+
+  color: #ffffff;
+
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.75);
+
+}
+
+.btnPreto{
+  background: rgb(45,42,55);
+  background: linear-gradient(180deg, rgba(45,42,55,1) 56%, rgba(54,51,61,1) 93%);
+
+  border: 2px solid #24212c;
+}
+
+.btnPreto:active{
+  background: rgb(45,42,55);
+  background: linear-gradient(0deg, rgba(45,42,55,1) 56%, rgba(54,51,61,1) 93%);
+  border: 1px solid #211e27;
+  box-shadow: none;
+}
+
+.btnRoxo{
+  background: rgb(71,45,117);
+  background: linear-gradient(180deg, rgba(71,45,117,1) 57%, rgba(69,46,110,1) 93%);
+
+  border: 2px solid #402868;
+}
+
+.btnRoxo:active{
+  background: #452e6e;
+  border: 1px solid #4c2f7b;
+  box-shadow: none;
+}
+
+.ce{
+  color: #4c2f7b;
+}
+
